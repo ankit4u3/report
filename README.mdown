@@ -1,11 +1,11 @@
-BE Project Final Report Template In Latex
+MCA Project Final Report Template In Latex 2013
 ================================
 
-Author : Mayank Jain
+Author : Ankit Prasad
 
-Blog : [My Blog](http://firesofmay.blogspot.in/)
+Blog : [My Blog](http://ankit4u3.wordpress.com/)
 
-For Details Check: [My Blog Post](http://firesofmay.blogspot.in/2012/04/final-be-project-report-template-in.html)
+
 
 
 Features :
