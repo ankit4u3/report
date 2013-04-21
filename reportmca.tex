@@ -1,20 +1,31 @@
-%-----Main FIle------
-%For Detail check out - http://firesofmay.blogspot.com/2011/10/latex-project-report-template
-%CHANGE THESE Settings ONLY IF YOU KNOW WHAT YOU DOING
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt,a4paper]{report}
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
 
-%adjust your page margins here
-\usepackage[top=30mm, bottom=25mm, left=35mm,right=20mm]{geometry} % setting the page alignment with this package
-\usepackage[pdftex]{graphicx} %for embedding images
-%\usepackage[hyphens]{url} %for proper url entries
-%\usepackage[dvips, bookmarks, colorlinks=false]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
-\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
-\usepackage{float} %used for figure placement with H as a parameter
-%\usepackage[hyphens]{url}
-%\usepackage{hyperref}
-\usepackage{pslatex} % for times new roman, old package, but works
-\usepackage{array} % for making text bold in table
+\documentclass[12pt,a4paper]{report}% use larger type; default would be 12pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+%\usepackage{geometry} % to change the page dimensions
+\usepackage[top=30mm, bottom=25mm, left=35mm,right=20mm]{geometry}
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margins=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+
+
 
 
 %For inserting Python Code
@@ -51,7 +62,7 @@
   morekeywords={*,...}               % if you want to add more keywords to the set
 }
 
-%%%%For inserting Python Code Over
+%%%%For inserting Python Code Ove
 
 
 
@@ -59,8 +70,49 @@
 
 
 
-%GLOBAL SETTINGS OVER, DOCUMENT BEGINS
+
+
+
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+
+
 \begin{document}
+
+
+
+
+
+
 
 %Renames "Bibliography" to "References" on ref page
 \renewcommand\bibname{References} 
@@ -117,10 +169,7 @@
 
 
 
-
-
 \input{introduction.tex} % adds the introduction page
-\input{test.tex} % adds the introduction page
 \input{literature-survey.tex} % adds the Literatu	re Survey page
 %\input{proposed-work.tex} % adds the Project Work page
 %\input{research-methodology.tex} % adds the Research Methodology page
